@@ -28,6 +28,10 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
+gem 'pry'
+
+
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -56,3 +60,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "trailblazer"
 gem "trailblazer-rails" # if you are in rails.
 gem "trailblazer-cells"
+
+gem 'trailblazer-endpoint', github: 'trailblazer/trailblazer-endpoint'
+gem "pundit"
+gem "cells-rails"
+gem "cells-haml"
+gem 'simple_form', '4.0.0'

@@ -1,7 +1,14 @@
 class UsersController < ApplicationController
   def index
-    run User::Operation::Index, params: show_params do |result|
-      render json: result[:model]
+    run User::Operation::Index do |result|
+      return render cell(User::Cell::Index, @model)
+    end
+    # return render cell(User::Cell::Index)
+  end
+
+  def new
+    run User::Operation::New do |result|
+      return render cell(User::Cell::New, @form)
     end
   end
 
